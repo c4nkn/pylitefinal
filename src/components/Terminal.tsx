@@ -41,7 +41,7 @@ const Terminal = ({ command, onCommandExecuted }: { command: string, onCommandEx
     fitAddon.fit();
     addEventListener('resize', () => fitAddon.fit());
 
-    const pty = spawn("/bin/zsh", [], {
+    const pty = spawn("powershell.exe", [], {
       cols: terminal.cols,
       rows: terminal.rows,
       cwd: openedFolder as string,

@@ -10,7 +10,7 @@ use std::process::Command;
 
 #[tauri::command]
 fn get_python_version() -> String {
-    let output = Command::new("python3")
+    let output = Command::new("python")
         .arg("--version")
         .output()
         .expect("Failed to execute command");
@@ -21,7 +21,7 @@ fn get_python_version() -> String {
 
 #[tauri::command]
 fn get_python_exec_path() -> String {
-    let output = Command::new("python3")
+    let output = Command::new("python")
         .arg("-c")
         .arg("import os, sys; print(sys.executable)")
         .output()

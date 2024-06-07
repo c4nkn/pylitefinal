@@ -136,7 +136,7 @@ function App() {
         {openedFile || openedFolder ? (
           <ResizablePanelGroup direction="horizontal">
             <ResizablePanel className="bg-app-third" defaultSize={isSidebarCollapsed ? 5 : 25} minSize={isSidebarCollapsed ? 5 : 15}>
-              <Sidebar onFileClick={handleFileClick} onCollapse={toggleCollapse} fileContent={fileContent} filePath={fileName} />
+              <Sidebar onFileClick={handleFileClick} onCollapse={toggleCollapse} fileContent={fileContent} filePath={filePath} />
             </ResizablePanel>
             <ResizableHandle />
             <ResizablePanel defaultSize={isSidebarCollapsed ? 95 : 75} minSize={isSidebarCollapsed ? 95 : 50} className="border-s border-s-app-border">

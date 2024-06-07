@@ -67,7 +67,7 @@ const DebugConsole: React.FC<DebugConsoleProps> = ({ startCommand, stepCommand, 
       fitAddon.fit();
       addEventListener('resize', () => fitAddon.fit());
 
-      const pty = spawn("/bin/zsh", [], {
+      const pty = spawn("powershell.exe", [], {
         cols: terminal.cols,
         rows: terminal.rows,
       });

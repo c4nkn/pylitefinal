@@ -49,7 +49,7 @@ const Explorer = ({ directory, level = 0, onFileClick }: { directory: string | n
 
   async function readFileContent(file: string) {
     try {
-      const content = await invoke('read_file_content', { path: `${directory}/${file}` });
+      const content = await invoke('read_file_content', { path: `${directory}\\${file}` });
       return content;
     } catch (error) {
       console.error(error);
@@ -90,7 +90,7 @@ const Explorer = ({ directory, level = 0, onFileClick }: { directory: string | n
                   </div>
                 </AccordionTrigger>
                 <AccordionContent>
-                  <Explorer directory={`${directory}/${entry}`} level={level + 1} onFileClick={onFileClick} />
+                  <Explorer directory={`${directory}\\${entry}`} level={level + 1} onFileClick={onFileClick} />
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
